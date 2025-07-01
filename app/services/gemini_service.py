@@ -127,8 +127,8 @@ class GeminiService:
     def _clean_response_text(self, text: str) -> str:
         """
         Limpia el texto de respuesta removiendo delimitadores de código.
-        
-        Gemini a veces incluye delimitadores \`\`\`json o \`\`\` en sus respuestas.
+
+        Gemini a veces incluye delimitadores ```json o ``` en sus respuestas.
         Esta función los remueve para obtener JSON puro que se pueda parsear.
         
         Args:
