@@ -75,7 +75,9 @@ class CacheManager:
                         self.question_cache.put(question)
                         
                         with self.topics_lock:
-                            self.previous_topics_global = question.get("tematicas_usadas", [])
+                            self.previous_topics_global.append(question.get("tematicas_usadas", []))
+                            if len(self.previous_topics_global) > settings.MAX_PREVIOUS_TOPICS:
+                                self.previous_topics_global = [] #Se asegura que no se acumulen demasiadas temáticas previas
                     
                     time.sleep(5)
                     

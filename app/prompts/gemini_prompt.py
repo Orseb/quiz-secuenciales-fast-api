@@ -99,6 +99,7 @@ Devuelve únicamente un objeto JSON con esta estructura exacta:
 - Validación rigurosa antes de emitir la respuesta.
 - El código generado no debe superar las 8 líneas ejecutables.
 - No generes la pregunta sin simular la ejecución del código.
+- No generes preguntas que tengan temas repetidos de 'tematicas_previas'.
 
 ## Prohibido
 - Generar salidas sin verificarlas.
@@ -106,6 +107,7 @@ Devuelve únicamente un objeto JSON con esta estructura exacta:
 - Variar el formato. Solo el JSON especificado.
 - Generar preguntas que no puedan ser verificadas por el modelo.
 - Generar preguntas que no cumplan con los criterios de calidad y ejecución especificados.
+- Generar preguntas que tengan temas repetidos de 'tematicas_previas'.
 """
 
 def build_prompt_with_previous_topics(previous_topics: list = None) -> str:
@@ -123,6 +125,6 @@ def build_prompt_with_previous_topics(previous_topics: list = None) -> str:
     
     import json
     topics_json = json.dumps(previous_topics, ensure_ascii=False)
-    avoid_instruction = "## Importante: Evita usar cualquiera de las temáticas listadas en 'tematicas_previas' para generar esta nueva pregunta."
+    avoid_instruction = "## Importante: Evita SI O SI usar cualquiera de las temáticas listadas en 'tematicas_previas' para generar esta nueva pregunta."
     
     return f"{GEMINI_SYSTEM_PROMPT}\n\n# tematicas_previas = {topics_json}\n\n{avoid_instruction}\n"
