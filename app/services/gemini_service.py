@@ -138,11 +138,11 @@ class GeminiService:
             str: Texto limpio sin delimitadores, listo para parsear como JSON
         """
 
-        if text.startswith("\`\`\`json"):
+        if text.startswith("```json"):
             text = text[7:]
-        if text.startswith("\`\`\`"):
+        if text.startswith("```"):
             text = text[3:]
-        if text.endswith("\`\`\`"):
+        if text.endswith("```"):
             text = text[:-3]
         
         return text.strip()
