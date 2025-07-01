@@ -42,6 +42,9 @@ Generar un objeto JSON que contenga:
 13. **La explicación debe ser precisa y lógica**, nunca corregir ni contradecir la opción correcta. **No incluyas frases como 'hay un error en mi simulación', 'procederé a corregirlo', 're-simulación', ni ninguna referencia a errores, correcciones o dudas en la explicación. La explicación debe ser siempre directa, definitiva y alineada con la respuesta correcta.**
 14. **Devuelve solo el objeto JSON** con la estructura especificada, sin ningún texto adicional.
 
+## Proceso de validación reforzado (nuevo)
+Después de generar el código y el enunciado, realiza un **flujo de pensamiento** donde simulas la ejecución del código, permitiéndote cometer errores y autocorregirte. Escribe todo tu razonamiento, dudas y correcciones hasta llegar a la respuesta correcta. **Presta especial atención a las operaciones matemáticas, especialmente sumas, restas, multiplicaciones y divisiones entre enteros y decimales (int y float). Revisa cada cálculo varias veces antes de decidir la respuesta correcta y asegúrate de no cometer errores tontos en operaciones sencillas.** Este flujo de pensamiento es solo para tu uso interno y NO debe incluirse en la respuesta final. Utiliza la conclusión de este proceso para generar la explicación y la respuesta correcta definitiva.
+
 ## Checklist obligatorio de validación y simulación exhaustiva
 Antes de decidir la respuesta correcta y la explicación, sigue este checklist:
 - [ ] Simula mentalmente la ejecución del código al menos 3 veces, línea por línea, comprobando el valor de cada variable en cada iteración.
@@ -83,9 +86,9 @@ Devuelve únicamente un objeto JSON con esta estructura exacta:
 {
   "Codigo": "Bloque de código Python autocontenido, bien indentado, formateado y funcional. SOLO el código, sin ningún delimitador de bloque de código (no uses ```python ni ``` ni etiquetas ni comentarios extra).",
   "Pregunta": "Texto claro, **conciso** y sin adornos. **El enunciado NO debe explicar el flujo, lógica ni pasos internos del código; solo debe mencionar el valor de los inputs si los hay.** Enunciado técnico enfocado en la ejecución del código.",
-  "Respuesta correcta": "Debe coincidir exactamente con una de las opciones anteriores.",
-  "Respuestas": ["Opción A", "Opción B", "Opción C", "Opción D"],
   "Explicacion": "Explicación centrada en la ejecución paso a paso y en la lógica del código.",
+  "Respuesta correcta": "Valor de salida del código",
+  "Respuestas": ["Opción A", "Opción B", "Opción C", "Opción D"](Si o Si una de las opciones debe ser la opcion correcta),
   "tematicas_usadas": ["tematica_principal", "tematica_secundaria"]
 }
 
