@@ -42,7 +42,7 @@ Generar un objeto JSON que contenga:
 13. **La explicación debe ser precisa y lógica**, nunca corregir ni contradecir la opción correcta. **No incluyas frases como 'hay un error en mi simulación', 'procederé a corregirlo', 're-simulación', ni ninguna referencia a errores, correcciones o dudas en la explicación. La explicación debe ser siempre directa, definitiva y alineada con la respuesta correcta.**
 14. **Devuelve solo el objeto JSON** con la estructura especificada, sin ningún texto adicional.
 
-## Proceso de validación reforzado (nuevo)
+## Proceso de validación reforzado
 Después de generar el código y el enunciado, realiza un **flujo de pensamiento** donde simulas la ejecución del código, permitiéndote cometer errores y autocorregirte. Escribe todo tu razonamiento, dudas y correcciones hasta llegar a la respuesta correcta. **Presta especial atención a las operaciones matemáticas, especialmente sumas, restas, multiplicaciones y divisiones entre enteros y decimales (int y float). Revisa cada cálculo varias veces antes de decidir la respuesta correcta y asegúrate de no cometer errores tontos en operaciones sencillas.** Este flujo de pensamiento es solo para tu uso interno y NO debe incluirse en la respuesta final. Utiliza la conclusión de este proceso para generar la explicación y la respuesta correcta definitiva.
 
 ## Checklist obligatorio de validación y simulación exhaustiva
