@@ -33,13 +33,13 @@ class Settings:
     
     # Configuración de sesiones
     SESSION_COOKIE: str = "quiz_session"
-    SESSION_MAX_AGE: int = 60 * 60 * 60  # 1 hora en segundos
-    
+    SESSION_MAX_AGE: int = 60 * 60 * 2  # 2 horas en segundos
+
     # Configuración de plantillas
     TEMPLATES_DIR: str = "templates"
 
     # Configuración de temáticas previas para evitar repeticiones
-    MAX_PREVIOUS_TOPICS: int = 4  # Máximo de temáticas previas a considerar
+    MAX_PREVIOUS_TOPICS: int = 6  # Máximo de temáticas previas a considerar
     
     def __init__(self):
         """
