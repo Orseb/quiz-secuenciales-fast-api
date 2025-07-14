@@ -39,7 +39,7 @@ class Settings:
     TEMPLATES_DIR: str = "templates"
 
     # Configuración de temáticas previas para evitar repeticiones
-    MAX_PREVIOUS_TOPICS: int = 6  # Máximo de temáticas previas a considerar
+    MAX_PREVIOUS_TOPICS: int = 8  # Máximo de temáticas previas a considerar
     
     def __init__(self):
         """
