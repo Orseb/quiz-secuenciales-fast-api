@@ -20,6 +20,7 @@ class Settings:
         SESSION_COOKIE (str): Nombre de la cookie de sesión
         SESSION_MAX_AGE (int): Tiempo de vida de la sesión en segundos
         TEMPLATES_DIR (str): Directorio donde se encuentran las plantillas HTML
+        MAX_PREVIOUS_TOPICS (int): Máximo de temáticas previas a considerar para evitar repeticiones
     """
     GENAI_API_KEY: str = os.getenv("GENAI_API_KEY")
     SESSION_SECRET_KEY: str = os.getenv("SESSION_SECRET_KEY")
