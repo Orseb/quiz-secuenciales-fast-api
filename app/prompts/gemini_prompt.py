@@ -116,7 +116,7 @@ def build_prompt_with_previous_topics(previous_topics: list = None) -> str:
     """
     if previous_topics is None:
         previous_topics = []
-    print(f"{previous_topics}")
+
     import json
     topics_json = json.dumps(previous_topics, ensure_ascii=False)
     avoid_instruction = "## Importante: Evita SI O SI usar cualquiera de las temáticas listadas en 'tematicas_previas' para generar esta nueva pregunta."
