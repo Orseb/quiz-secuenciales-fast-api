@@ -16,13 +16,13 @@ Características principales:
 - Validación rigurosa de preguntas generadas
 
 Autor: Sistema de Quiz Python
-Versión: 1.0.0
+Versión: 1.0.1
 """
 
 app = FastAPI(
     title="Python Quiz App",
     description="Generador de Quizzes Interactivas con IA",
-    version="1.0.0"
+    version="1.0.1"
 )
 
 app.include_router(router)
